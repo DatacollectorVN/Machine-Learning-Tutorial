@@ -1,0 +1,15 @@
+MODELS: ["LogisticRegression", "MLPClassifier"]
+DATA_DIR: "data/titanic.csv"
+TARGET_COL: "Survived"
+MODELZOO_DIR: "src/modelZoo.ini"
+DROP_COLS: ["PassengerId", "Name", "Cabin", "Ticket"]
+NUM_TOP_TITLES: 1
+GRID_SEARCH_CV_CONFIG: {
+  "scoring": "roc_auc",
+  "cv": 5,
+  "return_train_score": True,
+  "refit": True
+}
+PARAM_GRID: {
+  "columntransformer__pipeline-1__num_imputer__strategy": ['mean','median'] 
+}
