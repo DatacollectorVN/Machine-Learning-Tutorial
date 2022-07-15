@@ -24,7 +24,10 @@ conda activate ml-tutorial
 ```bash
 pip install -r requirements.txt
 ```
-
+- Setup dataset
+```bash
+bash setup_data.sh
+```
 ### For training
 - Change some configuration, change content of file `config/train.yaml`.
 - Start training
