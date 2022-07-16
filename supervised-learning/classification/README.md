@@ -13,9 +13,14 @@ Some common Supervised-learning models that is supported by `Sklearn`:
 - Artificial Neural Network (ANN)
 
 ## ML-Classification project architecture
-
-### Setup 
-- Create virtual environment
+### For running with Docker
+It seems like pretty simple.
+```bash
+docker-compose up -d
+``` 
+*Expected output:* Create `experiments` folder to record all training experiments.
+### For running without Docker 
+- Create virtual environmentv
 ```bash
 conda create -n ml-tutorial python=3.8 -y
 conda activate ml-tutorial
@@ -35,7 +40,7 @@ bash setup_data.sh
 python train.py
 ```
 
-### Add more ML models
+## Add more ML models
 This repository use `Grid Search` technique for finding best parameter for each model. Therefore, the parametets for tunning each model in `src/models.py`. Please read that carefully and add some approriate parameter's names in `GridSearchCV`. Please read our tuturial first it you'r not familiar with it in `custom-transformer/class-inheritance`.
 
 - Syntax for adding new model
