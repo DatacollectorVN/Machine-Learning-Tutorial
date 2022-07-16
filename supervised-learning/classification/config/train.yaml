@@ -1,7 +1,6 @@
 MODELS: ["LogisticRegression", "MLPClassifier"]
 DATA_DIR: "data/titanic.csv"
 TARGET_COL: "Survived"
-MODELZOO_DIR: "src/modelZoo.ini"
 DROP_COLS: ["PassengerId", "Name", "Cabin", "Ticket"]
 NUM_TOP_TITLES: 1
 GRID_SEARCH_CV_CONFIG: {
