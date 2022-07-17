@@ -19,7 +19,7 @@ class Trainer(SettingConfig):
         super(Trainer, self).__init__(**args)
 
     def setup_data_loader(self):
-        dataset =   CustomDataset(self.DATA_DIR, self.TARGET_COL)
+        dataset = CustomDataset(self.DATA_DIR, self.TARGET_COL)
         return dataset.get_orgi_data()
     
     def create_pipeline(self, transformer, model_name):

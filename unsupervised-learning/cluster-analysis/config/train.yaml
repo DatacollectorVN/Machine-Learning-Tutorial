@@ -1,0 +1,12 @@
+MODELS: ["KMeans"] 
+DATA_DIR: "data/ageinc_g.csv"
+TARGET_COLS: ["income", "age"]
+K_RANGES: [2, 10]
+MODELS_CONFIG: {
+  "KMeans": {
+    "init": "k-means++",
+    "max_iter": 400,
+    "verbose": 0,
+    "algorithm": "lloyd"
+  }
+}

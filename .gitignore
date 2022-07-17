@@ -1,5 +1,5 @@
 **/**/.ipynb_checkpoints
-supervised-learning/**/experiments
-supervised-learning/**/data
-supervised-learning/**/__pycache__
-supervised-learning/**/**/__pycache__
+**/**/experiments
+**/**/data
+**/**/__pycache__
+**/**/**/__pycache__
