@@ -1,14 +1,22 @@
-MODELS: ["LogisticRegression", "MLPClassifier"]
+MODELS: ["LogisticRegression", "SVC"]
 DATA_DIR: "data/titanic.csv"
-TARGET_COL: "Survived"
+SPECIAL_TRANSFORM: False
+
+# If don't have any column --> []
+TARGET_COL: "Survived" 
 DROP_COLS: ["PassengerId", "Name", "Cabin", "Ticket"]
-NUM_TOP_TITLES: 1
+CONTINUOUS_COLS: []
+UNORDER_CATE_COLS: []
+ORDER_CATE_COLS: []
+
+# If don't have give any column to transfer please do not provide columntransformer
+PARAM_GRID: {
+  # "columntransformer__pipeline-1__num_imputer__strategy": ['mean','median'] 
+}
+
 GRID_SEARCH_CV_CONFIG: {
   "scoring": "roc_auc",
   "cv": 5,
   "return_train_score": True,
   "refit": True
-}
-PARAM_GRID: {
-  "columntransformer__pipeline-1__num_imputer__strategy": ['mean','median'] 
 }
